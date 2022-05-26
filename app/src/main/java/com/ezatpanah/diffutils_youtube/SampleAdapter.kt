@@ -17,6 +17,7 @@ class SampleAdapter  : RecyclerView.Adapter<SampleAdapter.ViewHolder>(){
 
     override fun onBindViewHolder(holder: SampleAdapter.ViewHolder, position: Int) {
         holder.setData(differ.currentList[position])
+        holder.setIsRecyclable(false)
     }
 
     override fun getItemCount()=differ.currentList.size
